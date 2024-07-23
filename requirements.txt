@@ -1,0 +1,1 @@
+p8tool @ git+https://github.com/dansanderson/picotool
