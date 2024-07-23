@@ -29,5 +29,5 @@ end
 
 function Player.draw(self)
   -- Draw a white pixel at player's position
-  pset(self.x, self.y, 7)
+  pset(self.x, self.y, get_color())
 end
