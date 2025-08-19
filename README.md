@@ -2,7 +2,6 @@
 
 This repository is a template for a [PICO-8](https://www.lexaloffle.com/pico-8.php) cart using Make for automation and picotool for building the cart.
 
-
 ## How to use
 
 ### Setup
@@ -27,8 +26,9 @@ This repository is a template for a [PICO-8](https://www.lexaloffle.com/pico-8.p
     > LOAD MAIN.P8
     ```
 2. In edit mode sprites and sounds can be created as usual.
-3. In the code tab all lua files in the `src` directory must be included. By default, `main.lua` and `player.lua` are included.<br>
-**NOTE**: in this way you can still play at the game without building the cart. You just need to execute run after loading it.
+3. (optional) Include in the code tab all lua files in the `src` directory. By default, `main.lua`, `player.lua` and `colors.lua` are included.
+
+    **NOTE**: in this way you can still play at the game without building the cart as you'll just need to execute run after loading it. The build process will overwrite the lua section of `main.p8` and it will include all lua files in the `src` directory, thus making this step optional for the next step.
     ```
     > RUN
     ```
