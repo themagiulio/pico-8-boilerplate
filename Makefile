@@ -2,6 +2,7 @@ SRC_DIR     = src
 DIST_DIR    = dist
 
 minify:
+	@mkdir -p $(DIST_DIR)
 	@touch $(DIST_DIR)/main.lua
 
 	@for file in $$(find $(SRC_DIR)/ -name '*.lua'); do\
