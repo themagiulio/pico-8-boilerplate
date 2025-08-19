@@ -11,6 +11,8 @@ minify:
 
 build: minify
 	@cp main.p8 $(DIST_DIR)/main.p8
+	@sed -i '/__lua__/,/__gfx__/{/__lua__/!{/__gfx__/!d}}' ${DIST_DIR}/main.p8 \
+  && sed -i "/__lua__/r <(find ${SRC_DIR} -type f -name '*.lua' | sort | sed 's/^/#include /')" ${DIST_DIR}/main.p8
 	@sed '/^#/d' $(DIST_DIR)/main.p8 > $(DIST_DIR)/main_nolua.p8
 	@p8tool build $(DIST_DIR)/main_nolua.p8 --lua $(DIST_DIR)/main.lua 
 	@mv $(DIST_DIR)/main_nolua.p8 $(DIST_DIR)/main.p8
