@@ -4,10 +4,12 @@ This repository is a template for a [PICO-8](https://www.lexaloffle.com/pico-8.p
 
 ## How to use
 
+In the next section, the dollar sign `$` is used for representing a terminal prompt while a greater-then sign `>` is used for a PICO-8 one.
+
 ### Setup
 
 1. Install Python.
-2. Create virtual environment.
+2. Create and activate virtual environment.
 
     ```
     $ python -m venv .venv
